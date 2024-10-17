@@ -1,4 +1,4 @@
-table creation with derived columns:
+--table creation with derived columns
 
 CREATE TABLE Table_USA (
     Customer_Name VARCHAR(255) NOT NULL,
@@ -13,8 +13,8 @@ CREATE TABLE Table_USA (
     FLAG CHAR(1),
     Age INT AS (YEAR(CURRENT_DATE) - YEAR(DOB)),
     Days_Since_Last_Consult INT AS (DATEDIFF(CURRENT_DATE, Consul_Dt)),
-    INDEX idx_state (State),
-    INDEX idx_consult_date (Consul_Dt)
+    INDEX index_state (State),
+    INDEX index_consul_Dt (Consul_Dt)
 );
 
 CREATE TABLE Table_IND (
@@ -30,8 +30,8 @@ CREATE TABLE Table_IND (
     FLAG CHAR(1),
     Age INT GENERATED ALWAYS AS (YEAR(CURRENT_DATE) - YEAR(DOB)),
     Days_Since_Last_Consult INT GENERATED ALWAYS AS (DATEDIFF(CURRENT_DATE, Consul_Dt)),
-    INDEX idx_state (State),
-    INDEX idx_consult_date (Consul_Dt)
+    INDEX index_state (State),
+    INDEX index_consul_Dt (Consul_Dt)
 );
 
 CREATE TABLE Table_PHIL (
@@ -47,8 +47,8 @@ CREATE TABLE Table_PHIL (
     FLAG CHAR(1),
     Age INT GENERATED ALWAYS AS (YEAR(CURRENT_DATE) - YEAR(DOB)),
     Days_Since_Last_Consult INT GENERATED ALWAYS AS (DATEDIFF(CURRENT_DATE, Consul_Dt)),
-    INDEX idx_state (State),
-    INDEX idx_consult_date (Consul_Dt)
+    INDEX index_state (State),
+    INDEX index_consul_Dt (Consul_Dt)
 );
 
 CREATE TABLE Table_NYC (
@@ -64,8 +64,8 @@ CREATE TABLE Table_NYC (
     FLAG CHAR(1),
     Age INT GENERATED ALWAYS AS (YEAR(CURRENT_DATE) - YEAR(DOB)),
     Days_Since_Last_Consult INT GENERATED ALWAYS AS (DATEDIFF(CURRENT_DATE, Consul_Dt)),
-    INDEX idx_state (State),
-    INDEX idx_consult_date (Consul_Dt)
+    INDEX index_state (State),
+    INDEX index_consul_Dt (Consul_Dt)
 );
 
 CREATE TABLE Table_AU (
@@ -81,6 +81,6 @@ CREATE TABLE Table_AU (
     FLAG CHAR(1),
     Age INT GENERATED ALWAYS AS (YEAR(CURRENT_DATE) - YEAR(DOB)),
     Days_Since_Last_Consult INT GENERATED ALWAYS AS (DATEDIFF(CURRENT_DATE, Consul_Dt)),
-    INDEX idx_state (State),
-    INDEX idx_consult_date (Consul_Dt)
+    INDEX index_state (State),
+    INDEX index_consul_Dt (Consul_Dt)
 );
