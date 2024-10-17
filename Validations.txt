@@ -1,0 +1,5 @@
+1.Data format validation (checking cust_id it should be not null)
+2.Data consistency validation (checking for nulls in date values)
+3.Active flag validation
+4.Handling duplicates (we need to update the country of the customer based on latest consultation date)
+5.Indexing to increase performace
